@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechShop - Ordinateurs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">Tech<span>Shop</span></div>
+    <nav class="nav">
+      <a href="#accueil">Accueil</a>
+      <a href="#produits">Produits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="cart-btn" class="cart-btn">
+      🛒 <span id="cart-count">0</span>
+    </button>
+  </div>
+</header>
+
+<section id="accueil" class="hero">
+  <div class="container hero-inner">
+    <h1>Les meilleurs ordinateurs, au meilleur prix</h1>
+    <p>Portables, fixes et accessoires sélectionnés pour la performance et le style.</p>
+    <a href="#produits" class="btn-primary">Découvrir les produits</a>
+  </div>
+</section>
+
+<section id="produits" class="products">
+  <div class="container">
+    <h2>Nos ordinateurs</h2>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="tous">Tous</button>
+      <button class="filter-btn" data-filter="portable">Portables</button>
+      <button class="filter-btn" data-filter="fixe">Fixes</button>
+      <button class="filter-btn" data-filter="accessoire">Accessoires</button>
+    </div>
+
+    <div id="product-grid" class="product-grid">
+      <!-- Les produits sont injectés par script.js -->
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <h3>TechShop</h3>
+      <p>Votre boutique d'ordinateurs en ligne.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>contact@techshop.fr</p>
+      <p>+33 1 23 45 67 89</p>
+    </div>
+    <div>
+      <h4>Suivez-nous</h4>
+      <p>Facebook · Instagram · Twitter</p>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2026 TechShop. Tous droits réservés.</p>
+</footer>
+
+<!-- Panier -->
+<div id="cart-overlay" class="cart-overlay">
+  <div class="cart-panel">
+    <div class="cart-header">
+      <h2>Votre panier</h2>
+      <button id="cart-close" class="cart-close">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <p class="cart-empty">Votre panier est vide.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total :</span>
+        <span id="cart-total-value">0,00 €</span>
+      </div>
+      <button class="btn-primary cart-checkout">Commander</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
