@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
+      - name: Debug
+        run: |
+          echo "Username is '${{ vars.DOCKER_USERNAME }}'"
+          echo "Tag is '${{ steps.meta.outputs.tags }}'"
+
       - name: Checkout
         uses: actions/checkout@v6
 
